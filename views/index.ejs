@@ -1,0 +1,36 @@
+<div class="container well">
+    <div class="hero-unit">
+        <h1 id="hello">Content</h1>
+        <p>Welcome to this website!</p>
+        <p><a href="/about" class="btn btn-primary btn-large">Learn more &raquo;</a></p>
+    </div>
+    <div class="row">
+    <div class="span4">
+        <h2>Heading</h2>
+        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+        <p><a class="btn" href="#">View details &raquo;</a></p>
+    </div>
+    <div class="span4">
+        <h2>Heading</h2>
+        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+        <p><a class="btn" href="#">View details &raquo;</a></p>
+    </div>
+    <div class="span4">
+        <h2>Heading</h2>
+        <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+        <p><a class="btn" href="#">View details &raquo;</a></p>
+    </div>
+</div>
+
+<script>
+    const languages = ["Hello!", "สวัสดีครับ!", "你好!", "Hallo!", "Bonjour!", "Olá!", "안녕하세요!", "नमस्ते!", "Hola!", "Ciao!"]; 
+    let currentIndex = 0;
+    function displayHello() {
+        $('#hello').fadeOut(500, function() {
+            $('#hello').text(languages[currentIndex]).fadeIn(500);
+            currentIndex = (currentIndex + 1) % languages.length;
+        });
+        setTimeout(displayHello, 3000);
+    }
+    displayHello();
+</script>

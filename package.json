@@ -1,0 +1,10 @@
+{
+  "engines": {
+    "node": "0.10.8"
+  },
+  "dependencies": {
+    "ejs": "2.5.5",
+    "express": "3.3.8",
+    "express-ejs-layouts": "^1.1.0"
+  }
+}
