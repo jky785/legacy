@@ -6,21 +6,21 @@ app.set('view engine', 'ejs');
 app.use(express.static(__dirname + '/static'));
 app.use(expressLayouts)
 
-app.get('/', function(req, res) {
+app.get('/', (req, res) => {
     const data = {
         title: "home"
     };
     res.render('index', data);
 });
 
-app.get('/about', function(req, res) {
+app.get('/about', (req, res) => {
     const data = {
         title: "about"
     };
     res.render('about', data);
 });
 
-app.get('/login', function(req, res) {
+app.get('/login', (req, res) => {
     const data = {
         title: "login"
     };
