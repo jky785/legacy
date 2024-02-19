@@ -27,6 +27,6 @@ app.get('/login', (req, res) => {
     res.render('login', data);
 });
 
-app.listen(3000, function() {
-    console.log('Server listening on port 3000');
+app.listen(3000, () => {
+    console.log('Server is running on port 3000');
 });
