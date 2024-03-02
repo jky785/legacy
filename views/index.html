@@ -1,3 +1,5 @@
+{% extends 'layout.html' %}
+{% block content %}
 <div class="container well">
     <div class="hero-unit">
         <h1 id="hello">Content</h1>
@@ -21,7 +23,6 @@
         <p><a class="btn" href="#">View details &raquo;</a></p>
     </div>
 </div>
-
 <script>
     const languages = ["Hello!", "สวัสดีครับ!", "你好!", "Hallo!", "Bonjour!", "Olá!", "안녕하세요!", "नमस्ते!", "Hola!", "Ciao!"]; 
     let currentIndex = 0;
@@ -34,3 +35,4 @@
     }
     displayHello();
 </script>
+{% endblock %}

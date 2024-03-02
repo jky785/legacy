@@ -1,10 +1,22 @@
+//modules
 var express = require('express');
-var app = express();
-var expressLayouts = require('express-ejs-layouts')
+var session = require('express-session')
+var nunjucks = require('nunjucks');
 
-app.set('view engine', 'ejs');
+//parser
+var bodyParser = require('body-parser');
+var cookieParser = require('cookie-parser')
+
+//function
+var database = require('./func/database');
+
+//config
+var app = express();
+app.set('view engine', 'html');
 app.use(express.static(__dirname + '/static'));
-app.use(expressLayouts)
+nunjucks.configure('views', {
+    express: app
+});
 
 app.get('/', (req, res) => {
     const data = {
@@ -25,6 +37,13 @@ app.get('/login', (req, res) => {
         title: "login"
     };
     res.render('login', data);
+});
+
+app.get('/setting', (req, res) => {
+    const data = {
+        title: "setting"
+    };
+    res.render('setting', data);
 });
 
 app.listen(3000, () => {

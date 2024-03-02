@@ -6,3 +6,8 @@ if (window.location.pathname == '/') {
 } else if (window.location.pathname == '/login') {
     $("#login").addClass("active");
 };
+
+var useDark = false;
+if (useDark) {
+    $('body').addClass('dark');
+}
