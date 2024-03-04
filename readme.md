@@ -1,2 +1,4 @@
-# Express Based Board System
-## making all bootstrap version theme
+# EBBS
+## Express Based Board System
+using nunjuks, bootstrap, express, jquery
+## Origin: FBBS
