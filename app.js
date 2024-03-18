@@ -8,7 +8,7 @@ var bodyParser = require('body-parser');
 var cookieParser = require('cookie-parser')
 
 //function
-var database = require('./func/database');
+var database = require('./function/database');
 
 //config
 var app = express();
@@ -44,6 +44,15 @@ app.get('/setting', (req, res) => {
         title: "setting"
     };
     res.render('setting', data);
+});
+
+app.get('/edit/:id', (req, res) => {
+    const id = req.params.id;
+    const data = {
+        title: "edit",
+        id: id
+    };
+    res.render('edit', data);
 });
 
 app.listen(3000, () => {
